@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <title><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></title>
+    <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -14,6 +14,12 @@
     <h1><?php bloginfo('name'); ?></h1>
     <p><?php bloginfo('description'); ?></p>
     <nav>
-		<?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+		<?php
+		wp_nav_menu(array(
+			'theme_location' => 'main-menu',
+			'menu_class' => 'main-menu',
+			'container' => false
+		));
+		?>
     </nav>
 </header>
