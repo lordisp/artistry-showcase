@@ -1,0 +1,31 @@
+{
+  "name": "artistry-showcase",
+  "version": "1.0.0",
+  "description": "Artistry Showcase is an elegant and modern WordPress theme, perfect for artists and photographers who want to showcase their work in a stunning portfolio. With a clean design that draws attention to your art, this theme strikes a perfect balance between aesthetics and functionality.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss assets/css/app.css -o style.css",
+    "watch:css": "postcss assets/css/app.css -o style.css --watch",
+    "browser-sync": "browser-sync start --config bs-config.js"
+  },
+  "keywords": [
+    "portfolio",
+    "art",
+    "photography",
+    "responsive",
+    "clean",
+    "elegant",
+    "modern"
+  ],
+  "author": "Rafael Camison",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "postcss-cli": "^11.0.0"
+  }
+}
